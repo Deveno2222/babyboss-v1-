@@ -1,0 +1,66 @@
+/* === RESET STYLES === */
+
+/* Убираем все отступы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем стандартное оформление списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем подчёркивания ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Убираем стандартные стили кнопок и input */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* Курсор при наведении на кнопки */
+button {
+  cursor: pointer;
+}
+
+/* Делаем изображения адаптивными */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Настройки для html и body */
+html,
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: $text-white;
+  color: $text-primary;
+}
+
+/* Сглаживание шрифтов */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Убираем фокусную рамку в некоторых браузерах */
+:focus {
+  outline: none;
+}

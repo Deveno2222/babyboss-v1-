@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 6px;
+  background-color: $white;
+  border-radius: 8px;
+
+  max-width: fit-content;
+}
+
+.tab {
+  padding: 10px;
+  border-radius: 8px;
+
+  font-size: 20px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: background-color 0.23s ease, color 0.23s ease;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+
+  &.active_tab {
+    background-color: $blue;
+    color: $text-white;
+  }
+}
