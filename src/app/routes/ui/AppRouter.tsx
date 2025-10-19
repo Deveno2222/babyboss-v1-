@@ -1,15 +1,25 @@
-import { Route, Routes } from "react-router-dom";
+import { useRoutes, type RouteObject } from "react-router-dom";
 import { AppLayout } from "../../AppLayout/AppLayout";
-import { routeConfig } from "../config/routeConfig";
+import { routerConfig } from "../config/routeConfig";
 
 export function AppRouter() {
-  return (
-    <Routes>
-      <Route element={<AppLayout />}>
-        {routeConfig.map(({ path, element }) => (
-          <Route key={path} path={path} element={element} />
-        ))}
-      </Route>
-    </Routes>
-  );
+  const routes: RouteObject[] = [
+    {
+      element: <AppLayout />,
+      children: routerConfig,
+    },
+  ];
+
+  const element = useRoutes(routes);
+
+  return element;
+  // return (
+  //   <Routes>
+  //     <Route element={<AppLayout />}>
+  //       {routeConfig.map(({ path, element }) => (
+  //         <Route key={path} path={path} element={element} />
+  //       ))}
+  //     </Route>
+  //   </Routes>
+  // );
 }

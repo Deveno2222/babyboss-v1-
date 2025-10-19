@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "../../../../shared/ui/icons";
 import type { IClient } from "../../model/types";
 import styles from "./Client.module.scss";
@@ -64,10 +65,10 @@ export function Client({ data }: ClientProps) {
 
       {/* Футтер */}
       <div className={styles.foot}>
-        <div className={styles.details}>
+        <Link to={`clients/${data.id}`} className={styles.details}>
           <span className={styles.label}>Подробнее</span>
           <ArrowRight />
-        </div>
+        </Link>
       </div>
     </div>
   );

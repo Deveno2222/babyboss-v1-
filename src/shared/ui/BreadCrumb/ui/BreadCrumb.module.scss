@@ -1,0 +1,32 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.link {
+  color: $text-bread;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: $text-bread;
+}
+
+.current {
+  color: $text-primary;
+  font-weight: 400;
+}

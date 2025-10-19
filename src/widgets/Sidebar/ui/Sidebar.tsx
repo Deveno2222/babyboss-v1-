@@ -10,22 +10,38 @@ export function Sidebar() {
       <div className={styles.container}>
         <div className={styles.upper}>
           <div className={styles.logo_container}>
-            <img src={logo} alt="Логотип Babyboss" className={styles.logo} width={148} height={151}/>
+            <img
+              src={logo}
+              alt="Логотип Babyboss"
+              className={styles.logo}
+              width={148}
+              height={151}
+            />
           </div>
 
           <nav className={styles.nav}>
-            {navItems.map(({ id, label, path, icon: Icon }) => (
-              <NavLink
-                key={id}
-                to={path}
-                className={({ isActive }) =>
-                  isActive ? `${styles.link} ${styles.active}` : styles.link
-                }
-              >
-                {Icon && <Icon size={24} className={styles.icon} />}
-                <span className={styles.label}>{label}</span>
-              </NavLink>
-            ))}
+            {navItems.map(({ id, label, path, icon: Icon }) => {
+              const isClientsPage =
+                (path === "/" &&
+                  (location.pathname === "/" ||
+                    location.pathname.startsWith("/clients"))) ||
+                location.pathname === path;
+
+              return (
+                <NavLink
+                  key={id}
+                  to={path}
+                  className={
+                    isClientsPage
+                      ? `${styles.link} ${styles.active}`
+                      : styles.link
+                  }
+                >
+                  {Icon && <Icon size={24} className={styles.icon} />}
+                  <span className={styles.label}>{label}</span>
+                </NavLink>
+              );
+            })}
           </nav>
         </div>
 

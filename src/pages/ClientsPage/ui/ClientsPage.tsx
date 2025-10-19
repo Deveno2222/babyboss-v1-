@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { AddButton } from "../../../shared/ui/AddButton";
 import { Tabs } from "../../../shared/ui/Tabs/ui/Tabs";
 import styles from "./ClientsPage.module.scss";
 import type { ITab } from "../../../shared/ui/Tabs/model/types";
 import { SearchInput } from "../../../shared/ui/SearchInput/ui/SearchInput";
 import { ClientList } from "../../../entities/client/ui/ClientList/ClientList";
 import { clientsMock } from "../../../entities/client/model/mock.data";
+import { AddClient } from "../../../features/add-client/ui/AddClient";
 
 const tabs: ITab[] = [
   { id: 1, label: "Все", value: "ALL" },
@@ -51,7 +51,7 @@ export function ClientsPage() {
         {/* title + add_client */}
         <div className={styles.head_top}>
           <h2 className={styles.title}>Клиенты</h2>
-          <AddButton href="/" label="Добавить клиента" />
+          <AddClient />
         </div>
         {/* tabs + search */}
         <div className={styles.head_bot}>
