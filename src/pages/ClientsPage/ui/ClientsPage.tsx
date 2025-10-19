@@ -4,29 +4,42 @@ import { Tabs } from "../../../shared/ui/Tabs/ui/Tabs";
 import styles from "./ClientsPage.module.scss";
 import type { ITab } from "../../../shared/ui/Tabs/model/types";
 import { SearchInput } from "../../../shared/ui/SearchInput/ui/SearchInput";
+import { ClientList } from "../../../entities/client/ui/ClientList/ClientList";
+import { clientsMock } from "../../../entities/client/model/mock.data";
 
 const tabs: ITab[] = [
-  { id: 1, label: "Все", value: "all" },
+  { id: 1, label: "Все", value: "ALL" },
   {
     id: 2,
     label: "Активные",
-    value: "active",
+    value: "ACTIVE",
   },
   {
     id: 3,
     label: "Новые заявки",
-    value: "new",
+    value: "NEW",
   },
   {
     id: 4,
     label: "Приостановлены",
-    value: "stopped",
+    value: "STOPPED",
   },
 ];
 
 export function ClientsPage() {
   const [activeTab, setActiveTab] = useState<ITab>(tabs[0]);
   const [search, setSearch] = useState<string>("");
+
+  const filteredData = clientsMock.filter((item) => {
+    const matchesTab =
+      activeTab.value === "ALL" || item.status === activeTab.value;
+
+    const matchesSearch =
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
+      item.parent_number.includes(search);
+
+    return matchesTab && matchesSearch;
+  });
 
   useEffect(() => {
     console.log(activeTab);
@@ -46,6 +59,8 @@ export function ClientsPage() {
           <SearchInput value={search} onChange={setSearch} />
         </div>
       </div>
+
+      <ClientList data={filteredData} />
     </div>
   );
 }

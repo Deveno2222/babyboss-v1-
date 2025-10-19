@@ -1,6 +1,9 @@
 .sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 180px;
-  min-height: 100vh;
+  height: 100dvh;
   background-color: $green-background;
 
   display: flex;
