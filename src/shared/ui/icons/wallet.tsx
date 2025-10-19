@@ -1,9 +1,4 @@
-import type React from "react";
-
-interface IconProps extends React.SVGProps<SVGSVGElement> {
-  color?: string;
-  size?: number;
-}
+import type { IconProps } from "./model/types";
 
 export function Wallet({ color = "#F6F6F6", size = 24, ...props }: IconProps) {
   return (
