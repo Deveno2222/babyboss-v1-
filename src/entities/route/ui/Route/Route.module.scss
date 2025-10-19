@@ -1,0 +1,77 @@
+.route {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  box-shadow: 0px 3px 8px 0px #0000001a;
+
+  background-color: $white;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.paths {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 64px;
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.title_strong {
+  font-weight: 600;
+}
+
+.address_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 24px;
+  font-weight: 400;
+  color: $text-secondary;
+}
+
+.point {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.map {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.map_title {
+  font-size: 24px;
+  line-height: 20px;
+  font-weight: 600;
+  color: $blue;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.23s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration-color: $blue;
+  }
+}

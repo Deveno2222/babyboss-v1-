@@ -2,19 +2,18 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "../../../../shared/ui/icons";
 import type { IClient } from "../../model/types";
 import styles from "./Client.module.scss";
+import {
+  getRateLabel,
+  getStatusLabel,
+} from "../../../../shared/lib/formatters/ClientFormatters";
 
 interface ClientProps {
   data: IClient;
 }
 
 export function Client({ data }: ClientProps) {
-  const RATE = data.rate === "INDIVIDUAL" ? "Индивидуальный" : "Групповой";
-  const STATUS =
-    data.status === "ACTIVE"
-      ? "Активный"
-      : data.status === "NEW"
-      ? "Новая заявка"
-      : "Приостановлен";
+  const RATE = getRateLabel(data.rate);
+  const STATUS = getStatusLabel(data.status);
 
   return (
     <div className={styles.client}>

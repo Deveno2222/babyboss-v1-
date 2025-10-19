@@ -1,0 +1,38 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-top: 32px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 20px;
+}
+.title_text {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.23s ease;
+
+  &:hover {
+    text-decoration-color: $text-primary;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+  transform: rotate(180deg);
+
+  color: $text-primary;
+}

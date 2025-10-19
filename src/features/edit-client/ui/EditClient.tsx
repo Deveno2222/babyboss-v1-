@@ -1,5 +1,6 @@
 import { Button } from "../../../shared/ui/Button";
+import { Pencil } from "../../../shared/ui/icons/pencil";
 
 export function EditClient() {
-  return <Button>Редактировать</Button>;
+  return <Button icon={<Pencil />}>Редактировать</Button>;
 }

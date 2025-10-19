@@ -4,3 +4,5 @@ export { Wallet } from "./wallet";
 export { Plus } from "./plus";
 export { Search } from "./search";
 export { ArrowRight } from "./arrow-right";
+export { MapPin } from "./map-pin";
+export { File } from "./file";
