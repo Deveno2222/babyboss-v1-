@@ -41,7 +41,7 @@ export function Payment() {
           </div>
 
           <div className={styles.bill}>
-            <File />
+            <File className={styles.bill_icon} />
             <span className={styles.bill_label}>Чек_оплаты.pdf</span>
           </div>
         </div>

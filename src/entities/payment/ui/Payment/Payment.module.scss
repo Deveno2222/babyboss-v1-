@@ -111,3 +111,90 @@
   line-height: 20px;
   color: $blue;
 }
+
+@media (max-width: 1120px) {
+  .amount {
+    font-size: 24px;
+  }
+
+  .info_item {
+    width: fit-content;
+  }
+
+  .label {
+    font-size: 20px;
+  }
+
+  .info_text {
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .info {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    gap: 30px;
+  }
+
+  .amount {
+    width: fit-content;
+    font-size: 16px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .bill {
+    padding: 6px 12px;
+  }
+
+  .bill_label {
+    font-size: 12px;
+  }
+
+  .bill_icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .info_text {
+    font-size: 12px;
+  }
+
+  .bill_label {
+    font-size: 10px;
+  }
+
+  .bill {
+    padding: 2px 6px;
+  }
+}

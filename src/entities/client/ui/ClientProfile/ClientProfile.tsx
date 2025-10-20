@@ -28,19 +28,19 @@ export function ClientProfile({ data }: ClientProfileProps) {
         </div>
 
         <span className={styles.info_item}>
-          Тариф:{" "}
+          Тариф:
           <span className={styles.info_item_content}>
             {RATE} | Туда и обратно
           </span>
         </span>
         <span className={styles.info_item}>
-          Родитель:{" "}
+          Родитель:
           <span className={styles.info_item_content}>
             {data.parent}, {data.parent_number}
           </span>
         </span>
         <span className={styles.info_item}>
-          Водитель:{" "}
+          Водитель:
           <span className={styles.info_item_content}>
             {data.driver} • Kia Rio, 222 NUR 02
           </span>

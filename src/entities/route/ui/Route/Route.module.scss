@@ -75,3 +75,67 @@
     text-decoration-color: $blue;
   }
 }
+
+@media (max-width: 1120px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 20px;
+  }
+
+  .point {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .address_list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+  .map_title {
+    font-size: 16px;
+  }
+
+  .paths {
+    gap: 40px;
+  }
+
+  .map_icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 16px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .point {
+    font-size: 14px;
+  }
+
+  .paths {
+    gap: 16px;
+  }
+
+  .map_title {
+    font-size: 12px;
+  }
+
+  .route {
+    padding: 16px;
+  }
+}

@@ -8,8 +8,7 @@
 
   border-radius: 24px;
 
-  max-width: 320px;
-  width: 100%;
+  width: 320px;
 }
 
 .icon {
@@ -24,5 +23,11 @@
 
   &::placeholder {
     color: $blue;
+  }
+}
+
+@media (max-width: 1160px) {
+  .wrapper {
+    width: 100%;
   }
 }

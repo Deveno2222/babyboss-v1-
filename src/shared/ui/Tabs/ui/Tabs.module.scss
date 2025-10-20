@@ -1,4 +1,4 @@
-.tabs {
+.client_tabs {
   display: flex;
   flex-direction: row;
   gap: 16px;
@@ -6,7 +6,7 @@
   background-color: $white;
   border-radius: 8px;
 
-  max-width: fit-content;
+  
 }
 
 .tab {
@@ -27,5 +27,11 @@
   &.active_tab {
     background-color: $blue;
     color: $text-white;
+  }
+}
+
+@media (max-width: 768px) {
+  .client_tabs {
+    width: 100%;
   }
 }

@@ -55,8 +55,17 @@ export function ClientsPage() {
         </div>
         {/* tabs + search */}
         <div className={styles.head_bot}>
-          <Tabs value={activeTab} onChange={setActiveTab} tabs={tabs} />
-          <SearchInput value={search} onChange={setSearch} />
+          <Tabs
+            value={activeTab}
+            onChange={setActiveTab}
+            tabs={tabs}
+            className={styles.tabs}
+          />
+          <SearchInput
+            value={search}
+            onChange={setSearch}
+            className={styles.search}
+          />
         </div>
       </div>
 

@@ -42,7 +42,12 @@ export function ClientsDetailsPage() {
       </div>
       <ClientProfile data={user} />
       <div>
-        <Tabs value={activeTab} onChange={setActiveTab} tabs={tabs} />
+        <Tabs
+          value={activeTab}
+          onChange={setActiveTab}
+          tabs={tabs}
+          className={styles.tabs}
+        />
       </div>
 
       {activeTab.value === "routes" && <RouteList />}

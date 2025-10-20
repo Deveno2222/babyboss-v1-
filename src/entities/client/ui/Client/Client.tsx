@@ -33,7 +33,7 @@ export function Client({ data }: ClientProps) {
           <div className={styles.info_block}>
             <span className={styles.info_label}>Родитель</span>
             <span className={styles.info}>
-              {data.parent}{" "}
+              <span>{data.parent}</span>
               <span className={styles.info_secondary}>
                 {data.parent_number}
               </span>
@@ -66,7 +66,7 @@ export function Client({ data }: ClientProps) {
       <div className={styles.foot}>
         <Link to={`clients/${data.id}`} className={styles.details}>
           <span className={styles.label}>Подробнее</span>
-          <ArrowRight />
+          <ArrowRight className={styles.details_icon} />
         </Link>
       </div>
     </div>
