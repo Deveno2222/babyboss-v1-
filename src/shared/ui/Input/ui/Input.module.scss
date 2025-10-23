@@ -1,0 +1,83 @@
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.required {
+  color: $text-red;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  color: $text-primary;
+}
+
+.input_wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid $input-border;
+  border-radius: 8px;
+
+  padding: 16px 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-primary;
+
+  &::placeholder {
+    color: $text-bread;
+    line-height: 100%;
+  }
+
+  &.input_error {
+    border: 1px solid $text-red;
+  }
+}
+
+.input_label {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+
+  padding: 0 4px;
+
+  background-color: $white;
+  color: $text-bread;
+}
+
+.calendar_icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}

@@ -1,0 +1,44 @@
+.client_edit {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  margin-top: 32px;
+}
+
+.head {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.arrow_icon {
+  width: 40px;
+  height: 40px;
+
+  transform: rotate(180deg);
+}
+
+.back_link_title {
+  font-size: 32px;
+  font-weight: 800;
+
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.23s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration-color: $text-primary;
+  }
+}
+
+.content {
+  padding: 32px 24px;
+
+  background-color: $white;
+  border-radius: 8px;
+  box-shadow: 0px 3px 8px 0px #0000001a;
+}

@@ -38,7 +38,7 @@ export function ClientsDetailsPage() {
           <ArrowRight className={styles.icon} color="#2D2D2D" size={40} />
           <span className={styles.title_text}>{user.name}</span>
         </Link>
-        <EditClient />
+        <EditClient id={String(id)} />
       </div>
       <ClientProfile data={user} />
       <div>

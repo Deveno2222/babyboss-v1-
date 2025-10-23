@@ -6,3 +6,5 @@ export { Search } from "./search";
 export { ArrowRight } from "./arrow-right";
 export { MapPin } from "./map-pin";
 export { File } from "./file";
+export { Frame } from "./frame";
+export { Calendar } from "./calendar";

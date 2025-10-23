@@ -1,0 +1,71 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.routes {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.from {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.from_input {
+  flex: 1;
+}
+
+.time {
+  max-width: 80px;
+}
+
+.remove_route {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: $text-red;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+
+  transition: text-decoration-color 0.23s ease;
+
+  &:hover {
+    text-decoration-color: $text-red;
+  }
+}
+
+.add_route {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 0;
+  border: 1px dashed $grey-foreground;
+  border-radius: 8px;
+
+  transition: background-color 0.23s ease;
+
+  & span {
+    font-size: 20px;
+    font-weight: 600;
+    color: $grey-foreground;
+  }
+
+  &:hover {
+    background-color: $background;
+  }
+}
+
+.btn_save {
+  padding: 16px 20px;
+}

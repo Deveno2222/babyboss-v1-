@@ -3,6 +3,7 @@ import { ClientsLayout } from "../../../pages/ClientDetailsPage/layouts/ClientsL
 import { ClientsDetailsPage } from "../../../pages/ClientDetailsPage/ui/ClientDetailsPage";
 import { ClientsPage } from "../../../pages/ClientsPage/ui/ClientsPage";
 import { NotFoundPage } from "../../../pages/NotFound";
+import { ClientEditPage } from "../../../pages/ClientEditPage/ui/CliendEditPage";
 
 export const routerConfig = [
   {
@@ -20,6 +21,10 @@ export const routerConfig = [
       {
         path: ":id",
         element: <ClientsDetailsPage />,
+      },
+      {
+        path: ":id/edit",
+        element: <ClientEditPage />,
       },
     ],
   },

@@ -1,0 +1,144 @@
+.select_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 100%;
+  color: $text-primary;
+}
+
+.select {
+  position: relative;
+  width: 100%;
+  border: 1px solid $input-border;
+  border-radius: 8px;
+
+  padding: 16px 20px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: $text-primary;
+
+  &.select_error {
+    border: 1px solid $text-red;
+  }
+}
+
+.required {
+  color: $text-red;
+}
+
+.icon_frame {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.3s ease;
+
+  &.icon_open {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.placeholder {
+  color: $text-bread;
+  line-height: 100%;
+}
+
+.options {
+  position: absolute;
+  top: 90px;
+  left: 0;
+
+  max-height: 1000px;
+  overflow-y: auto;
+
+  width: 100%;
+  border: 1px solid $input-border;
+  background-color: $white;
+
+  border-radius: 8px;
+
+  z-index: 10;
+}
+
+.input_wrapper {
+  position: relative;
+
+  padding: 16px 20px;
+  border-bottom: 1px solid $input-border;
+
+  cursor: text;
+}
+
+.search_input {
+  width: 100%;
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+
+    color: $text-bread;
+  }
+}
+
+.search_icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 20px;
+  transition: background-color 0.23s ease;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-hover;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.image {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.child_list {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 16px;
+
+  border: 1px solid $input-border;
+  border-radius: 8px;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  justify-content: center;
+  align-items: center;
+}
